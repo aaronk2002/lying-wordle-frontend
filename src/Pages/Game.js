@@ -94,12 +94,12 @@ function compareWord(com, player, gameType) {
 }
 
 async function getNewWord() {
-    let word = await axios.get('http://localhost:5000/word/');
+    let word = await axios.get('https://lying-wordle-server.herokuapp.com/word/');
     return word.data.word;
 }
 
 async function isWord(word) {
-    let res = await axios.post('http://localhost:5000/word/match/', {word: word});
+    let res = await axios.post('https://lying-wordle-server.herokuapp.com/word/match/', {word: word});
     return Boolean(res.data);
 }
 

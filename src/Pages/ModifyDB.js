@@ -50,7 +50,7 @@ const ModifyDB = () => {
 
     const postWords = async (start, end) => {
         for (let idx = start; idx < end; idx++) {
-            await axios.post('http://localhost:5000/word/new', {word: myWord[idx]}).then(() => {
+            await axios.post('https://lying-wordle-server.herokuapp.com/word/new', {word: myWord[idx]}).then(() => {
                 console.log('SUCCESS');
             }).catch((err) => {
                 console.log(err)
@@ -60,7 +60,7 @@ const ModifyDB = () => {
 
     const deleteDB = () => {
         console.log('Entering Function');
-        axios.delete('http://localhost:5000/word/erase').then(() => {
+        axios.delete('https://lying-wordle-server.herokuapp.com/word/erase').then(() => {
             console.log('SUCCESS');
         }).catch((err) => {
             console.log(err)
