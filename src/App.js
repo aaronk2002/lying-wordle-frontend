@@ -12,7 +12,7 @@ function App() {
 }
 
 function callApi() {
-    fetch('https://lying-wordle-server.herokuapp.com/', { method: 'GET' })
+    fetch('https://lying-wordle-server.herokuapp.com/details', { method: 'GET' })
         .then(data => data.json())
         .then(json => alert(JSON.stringify(json)))
 }
