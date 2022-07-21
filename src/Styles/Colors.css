@@ -1,0 +1,101 @@
+.gray {
+    background-color: #b5b5b5;
+    border: solid;
+    border-color: #b5b5b5;
+}
+
+.yellow {
+    background-color: #FFE600;
+    border: solid;
+    border-color: #FFE600;
+}
+
+.green {
+    background-color: #4EF855;
+    border: solid;
+    border-color: #4EF855;
+}
+
+.white {
+    background-color: #FFFFFF;
+    border: solid;
+    border-color: black;
+}
+
+.blue {
+    background-color: #07e6c9;
+    border: solid;
+    border-color: #07e6c9;
+}
+
+@keyframes white-to-green {
+    from {
+        background-color: #FFFFFF;
+        border: solid;
+        border-color: black;
+    }
+    to {
+        background-color: #4EF855;
+        border: solid;
+        border-color: #4EF855;
+    }
+}
+
+@keyframes white-to-yellow {
+    from {
+        background-color: #FFFFFF;
+        border: solid;
+        border-color: black;
+    }
+    to {
+        background-color: #FFE600;
+        border: solid;
+        border-color: #FFE600;
+    }
+}
+
+@keyframes white-to-gray {
+    from {
+        background-color: #FFFFFF;
+        border: solid;
+        border-color: black;
+    }
+    to {
+        background-color: #b5b5b5;
+        border: solid;
+        border-color: #b5b5b5;
+    }
+}
+
+@keyframes white-to-blue {
+    from {
+        background-color: #FFFFFF;
+        border: solid;
+        border-color: black;
+    }
+    to {
+        background-color: #07e6c9;
+        border: solid;
+        border-color: #07e6c9;
+    }
+}
+
+.white-green {
+    animation-name: white-to-green;
+    animation-duration: 1s;
+}
+
+.white-yellow {
+    animation-name: white-to-yellow;
+    animation-duration: 1s;
+}
+
+.white-gray {
+    animation-name: white-to-gray;
+    animation-duration: 1s;
+}
+
+.white-blue {
+    animation-name: white-to-blue;
+    animation-duration: 1s;
+}

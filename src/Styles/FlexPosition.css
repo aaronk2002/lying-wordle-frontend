@@ -1,0 +1,28 @@
+.column-flex-cotainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.column-flex-single {
+    flex: auto;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+.row-flex-container {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+}
+
+.row-flex-single {
+    flex: auto;
+    padding: 3px;
+}

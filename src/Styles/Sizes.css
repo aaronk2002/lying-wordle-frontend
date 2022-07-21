@@ -1,0 +1,23 @@
+.square {
+    aspect-ratio: 1/1;
+}
+
+.large {
+    width: min(12vw, 12vh);
+    font-size: min(8vw, 8vh);
+    border-radius: 5px;
+}
+
+.small {
+    width: min(9vw, 9vh);
+    font-size: min(6vw, 6vh);
+    border-radius: 4px;
+}
+
+.letter-key {
+    width: min(5vw, 5vh);
+}
+
+.other-key {
+    width: fit-content;
+}
