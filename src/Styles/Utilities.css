@@ -68,3 +68,21 @@
     75% { transform: translateY(2px); }
     100% { transform: translateY(0px); }
 }
+
+.border {
+    border: solid;
+    border-radius: 5px;
+    border-width: 1px;
+}
+
+.middle {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}

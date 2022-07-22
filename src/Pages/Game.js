@@ -119,13 +119,14 @@ const Game = (props) => {
     const [column, setColumn] = useState(0);
     const [dev, setDev] = useState(0);
     const [game, setGame] = useState('Ongoing');
+    const [freeze, setFreeze] = useState(false);
     useEffect(()=>{
         getNewWord().then(word => {setAns(word);console.log('HERE');});
     }, [])
 
     // Function to handle enter.
     const handleEnter = () => {
-        if (game === 'Ongoing') {
+        if (game === 'Ongoing' && !freeze) {
             console.log('Enter');
             setDev(dev + 1);
             if (column === 5 && row !== 6) {
@@ -164,11 +165,13 @@ const Game = (props) => {
                             copyGuesses[row][i][1] = 'white shake' + ((i % 2 === 1) ? '1' : '2');
                         }
                         setGuesses(copyGuesses);
+                        setFreeze(true);
                         setTimeout(() => {
                             for (let i = 0; i < 5; i++) {
                                 copyGuesses[row][i][1] = 'white';
                             }
                             setGuesses(copyGuesses);
+                            setFreeze(false);
                         }, 1000)
                     }
                 })
@@ -179,7 +182,7 @@ const Game = (props) => {
 
     // Function to handle backspace
     const handleBackspace = () => {
-        if (game === 'Ongoing') {
+        if (game === 'Ongoing' && !freeze) {
             console.log('Backspace');
             setDev(dev + 1);
             if (column > 0) {
@@ -196,7 +199,7 @@ const Game = (props) => {
 
     // Function to handle alphabet input
     const handleAlphabet = (event) => {
-        if (game === 'Ongoing') {
+        if (game === 'Ongoing' && !freeze) {
             console.log(event.key);
             setDev(dev + 1);
             if (column < 5) {
@@ -234,47 +237,49 @@ const Game = (props) => {
                 )}
             </div>
 
-            {game === 'Ongoing' ? 
-                <><br />
-                <div className="column-flex-cotainer">
-                    <div className="column-flex-single">
-                        <span className="row-flex-container">
-                            {row1.map((letter) => 
-                                <button className="row-flex-single key letter-key white" onClick={() => handleAlphabet({key: letter})}>{letter}</button>
-                            )}
-                        </span>
-                    </div>
-                    <div className="column-flex-single">
-                        <span className="row-flex-container">
-                            {row2.map((letter) => 
-                                <button className="row-flex-single key letter-key white" onClick={() => handleAlphabet({key: letter})}>{letter}</button>
-                            )}
-                        </span>
-                    </div>
-                    <div className="column-flex-single">
-                        <span className="row-flex-container">
-                            <button className="row-flex-single key other-key white" onClick={handleEnter}>Enter</button>
-                            {row3.map((letter) => 
-                                <button className="row-flex-single key letter-key white" onClick={() => handleAlphabet({key: letter})}>{letter}</button>
-                            )}
-                            <button className="row-flex-single key other-key white" onClick={handleBackspace}>Backspace</button>
-                        </span>
-                    </div>
-                </div></>
+            <br />
+            <div className="column-flex-cotainer">
+                <div className="column-flex-single">
+                    <span className="row-flex-container">
+                        {row1.map((letter) => 
+                            <button className="row-flex-single key letter-key white" onClick={() => handleAlphabet({key: letter})}>{letter}</button>
+                        )}
+                    </span>
+                </div>
+                <div className="column-flex-single">
+                    <span className="row-flex-container">
+                        {row2.map((letter) => 
+                            <button className="row-flex-single key letter-key white" onClick={() => handleAlphabet({key: letter})}>{letter}</button>
+                        )}
+                    </span>
+                </div>
+                <div className="column-flex-single">
+                    <span className="row-flex-container">
+                        <button className="row-flex-single key other-key white" onClick={handleEnter}>Enter</button>
+                        {row3.map((letter) => 
+                            <button className="row-flex-single key letter-key white" onClick={() => handleAlphabet({key: letter})}>{letter}</button>
+                        )}
+                        <button className="row-flex-single key other-key white" onClick={handleBackspace}>Backspace</button>
+                    </span>
+                </div>
+            </div>
 
+            {game === 'Ongoing' ? 
+                <></>
             :
-                <div className="column-flex-cotainer">
-                    <p className="column-flex-single game-over-screen">You {game === 'Win' ? <>Won!</> : <>Lost! The Word Was {ans}</>}</p>
-                    <div className="column-flex-single center">
-                        <span className="row-flex-container">
-                            <button className="retry-and-home yellow" onClick={handleRetry}>Retry</button>
-                            <Link to='/'>
-                                <button className="retry-and-home green">Home</button>
-                            </Link>                            
-                        </span>
+                <div className="middle">
+                    <div className="column-flex-cotainer white">
+                        <p className="column-flex-single game-over-screen">You {game === 'Win' ? <>Won!</> : <>Lost! The Word Was {ans}</>}</p>
+                        <div className="column-flex-single center">
+                            <span className="row-flex-container">
+                                <button className="retry-and-home yellow" onClick={handleRetry}>Retry</button>
+                                <Link to='/'>
+                                    <button className="retry-and-home green">Home</button>
+                                </Link>                            
+                            </span>
+                        </div>
                     </div>
                 </div>
-
             }
 
             <div className="dead-space" />
