@@ -6,6 +6,11 @@ const ModifyDB = () => {
     const [last, setLast] = useState(0);
     const alph = 'qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM';
 
+    // Tab Name
+    useEffect(() => {
+        document.title = "Lie Wordle | Modify DB";
+    }, []);
+
     // Determines if a word has only five alphabetic
     // characters (\r allowed at the end).
     const isFive = (word) => {

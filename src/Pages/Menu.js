@@ -6,6 +6,11 @@ import "../Styles/Utilities.css";
 
 // The Menu Page.
 function Menu() {
+    // Tab Name
+    useEffect(() => {
+        document.title = "Lie Wordle | Menu";
+    }, []);
+
     // Information about how tiles are to be arranged for title.
     const lying = [
         ['L', 'gray', 'large'],

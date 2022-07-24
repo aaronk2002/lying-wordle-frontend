@@ -112,6 +112,11 @@ const row3 = 'ZXCVBNM'.split('');
 
 // How the game looks
 const Game = (props) => {
+    // Tab Name
+    useEffect(() => {
+        document.title = "Lie Wordle | Game";
+    }, []);
+
     // States
     const [ans, setAns] = useState('CROSS');
     const [guesses, setGuesses] = useState(initialGuesses());
