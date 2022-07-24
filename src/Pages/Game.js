@@ -121,13 +121,12 @@ const Game = (props) => {
     const [game, setGame] = useState('Ongoing');
     const [freeze, setFreeze] = useState(false);
     useEffect(()=>{
-        getNewWord().then(word => {setAns(word);console.log('HERE');});
+        getNewWord().then(word => {setAns(word);});
     }, [])
 
     // Function to handle enter.
     const handleEnter = () => {
         if (game === 'Ongoing' && !freeze) {
-            console.log('Enter');
             setDev(dev + 1);
             if (column === 5 && row !== 6) {
                 // Get the guessed word.
@@ -140,7 +139,6 @@ const Game = (props) => {
                     if (res) {
                         // Get the colors.
                         let colors = compareWord(ans, guessWord, props.gameType);
-                        console.log(colors);
 
                         // Modify board with colors and determine if the guess is correct.
                         let correct = guessWord === ans;
@@ -160,7 +158,6 @@ const Game = (props) => {
                         setColumn(0);
                     }
                     else {
-                        console.log('HERE');
                         for (let i = 0; i < 5; i++) {
                             copyGuesses[row][i][1] = 'white shake' + ((i % 2 === 1) ? '1' : '2');
                         }
@@ -183,7 +180,6 @@ const Game = (props) => {
     // Function to handle backspace
     const handleBackspace = () => {
         if (game === 'Ongoing' && !freeze) {
-            console.log('Backspace');
             setDev(dev + 1);
             if (column > 0) {
                 // Change position.
@@ -200,7 +196,6 @@ const Game = (props) => {
     // Function to handle alphabet input
     const handleAlphabet = (event) => {
         if (game === 'Ongoing' && !freeze) {
-            console.log(event.key);
             setDev(dev + 1);
             if (column < 5) {
                 // Handle addition of letter.
@@ -216,7 +211,6 @@ const Game = (props) => {
 
     // Function to handle retry
     const handleRetry = () => {
-        console.log('Retry');
         getNewWord().then(word => {setAns(word);console.log('HERE');});
         setColumn(0);
         setRow(0);
