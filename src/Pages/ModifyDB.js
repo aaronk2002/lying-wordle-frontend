@@ -48,6 +48,7 @@ const ModifyDB = () => {
         reader.readAsText(e.target.files[0]);
     };
 
+    // Post all five letter words in a loaded document.
     const postWords = async (start, end) => {
         for (let idx = start; idx < end; idx++) {
             await axios.post('https://lying-wordle-server.herokuapp.com/word/new', {word: myWord[idx]}).then(() => {
@@ -58,6 +59,7 @@ const ModifyDB = () => {
         }
     }
 
+    // Delete DB.
     const deleteDB = () => {
         console.log('Entering Function');
         axios.delete('https://lying-wordle-server.herokuapp.com/word/erase').then(() => {
