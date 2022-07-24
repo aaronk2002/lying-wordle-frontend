@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const ModifyDB = () => {
     const [myWord, setMyWord] = useState([]);
