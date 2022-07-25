@@ -7,7 +7,7 @@ import '../Styles/Utilities.css';
 function LetterTile(props) {
     return (<>
         <div className={props.color + ' square center ' + props.size}>
-            <div className='mobile-center'>
+            <div className='mobile-center center'>
                 {props.letter}
             </div>
         </div>
