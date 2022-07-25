@@ -6,8 +6,10 @@ import '../Styles/Utilities.css';
 // A component that makes one tile.
 function LetterTile(props) {
     return (<>
-        <div className={props.color + ' square center mobile-center ' + props.size}>
-            {props.letter}
+        <div className={props.color + ' square center ' + props.size}>
+            <div className='mobile-center'>
+                {props.letter}
+            </div>
         </div>
     </>);
 }
