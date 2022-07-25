@@ -2,18 +2,22 @@ import '../Styles/Colors.css';
 import '../Styles/Sizes.css';
 import '../Styles/FlexPosition.css';
 import '../Styles/Utilities.css';
-import {BrowserView, MobileView} from 'react-device-detect';
 
 // A component that makes one tile.
 function LetterTile(props) {
+    // Check width of screen
+    const [width, setWidth] = useState(window.innerWidth);
+
     return (<>
         <div className={props.color + ' square center ' + props.size}>
-            <MobileView>
-                <div className='mobile-center center'>
-                    <p className='remove-margin center'>{props.letter}</p>
+            {
+                width <= 768 ?
+                <div className='mobile-center'>
+                    {props.letter}
                 </div>
-            </MobileView>
-            <BrowserView>{props.letter}</BrowserView>
+                :
+                <>{props.letter}</>
+            }
         </div>
     </>);
 }
