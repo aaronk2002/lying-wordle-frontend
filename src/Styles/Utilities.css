@@ -99,3 +99,7 @@
 .mobile-center {
     margin: auto;
 }
+
+.remove-margin {
+    margin: 0px;
+}
