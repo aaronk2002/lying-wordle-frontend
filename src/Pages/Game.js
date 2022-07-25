@@ -236,8 +236,10 @@ const Game = (props) => {
                 )}
             </div>
 
-            <br />
             <div className="column-flex-cotainer">
+                <div className="column-flex-single">
+                    <Link to='/'><button className="retry-and-home green">Home</button></Link>
+                </div>
                 <div className="column-flex-single">
                     <span className="row-flex-container">
                         {row1.map((letter) => 

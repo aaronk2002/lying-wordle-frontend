@@ -54,6 +54,13 @@ function Menu() {
                         </Link>
                     </div>
                 )}
+                <div className="column-flex-single">
+                    <Link to='/howtoplay'>
+                        <button className='level-button gray' type="submit">
+                            How To Play
+                        </button>
+                    </Link>
+                </div>
             </div>
 
         </div>

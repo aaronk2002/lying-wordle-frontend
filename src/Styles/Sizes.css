@@ -21,3 +21,7 @@
 .other-key {
     width: fit-content;
 }
+
+.small-box {
+    width: 75vw;
+}

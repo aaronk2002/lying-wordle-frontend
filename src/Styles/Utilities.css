@@ -5,6 +5,11 @@
     vertical-align: middle;
 }
 
+.screen-fit-content {
+    width: 100vw;
+    height: fit-content;
+}
+
 .dead-space {
     display: inline-block;
     height: min(5vh, 5vw);
@@ -84,5 +89,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
+}
+
+.center-font {
     text-align: center;
 }
