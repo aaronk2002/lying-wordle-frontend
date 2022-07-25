@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom';
 import "../Styles/FlexPosition.css";
 import "../Styles/Utilities.css";
 import "../Styles/Sizes.css";
+import "../Styles/Fonts.css";
 
 // The Menu Page.
 function HowToPlay() {

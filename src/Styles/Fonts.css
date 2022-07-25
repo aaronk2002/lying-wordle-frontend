@@ -1,0 +1,20 @@
+.game-over-screen {
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    font-size: xx-large;
+}
+
+.title {
+    font-size: min(8vw, 8vh);
+    margin: 5vh;
+    height: fit-content;
+}
+
+.center-font {
+    text-align: center;
+}
+
+.mobile-center {
+    margin: auto;
+}

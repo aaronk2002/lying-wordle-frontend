@@ -2,6 +2,7 @@ import '../Styles/Colors.css';
 import '../Styles/Sizes.css';
 import '../Styles/FlexPosition.css';
 import '../Styles/Utilities.css';
+import "../Styles/Fonts.css";
 import { useState } from "react";
 
 // A component that makes one tile.

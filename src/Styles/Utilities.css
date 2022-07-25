@@ -15,44 +15,6 @@
     height: min(5vh, 5vw);
 }
 
-.level-button {
-    border-radius: 10px;
-    width: min(30vw, 30vh);
-    height: min(10vw, 10vh);
-    font-size: min(4vw, 4vh);
-    border: none;
-    -webkit-appearance: button;
-    -moz-appearance: button;
-    appearance: button;
-}
-
-.key {
-    margin: 2px;
-    border-width: 2px;
-    border-radius: 3px;
-    height: min(5vw, 5vh);
-}
-
-.game-over-screen {
-    margin: 10px;
-    display: flex;
-    justify-content: center;
-    font-size: xx-large;
-}
-
-.retry-and-home {
-    flex: auto;
-    margin: 10px;
-    border-radius: 3px;
-    height: min(5vw, 5vh);
-}
-
-.title {
-    font-size: min(8vw, 8vh);
-    margin: 5vh;
-    height: fit-content;
-}
-
 .shake1 {
     animation: shaker1 0.1s alternate;
     animation-iteration-count: 10;
@@ -90,16 +52,4 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-}
-
-.center-font {
-    text-align: center;
-}
-
-.mobile-center {
-    margin: auto;
-}
-
-.remove-margin {
-    margin: 0px;
 }

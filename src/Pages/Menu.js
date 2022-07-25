@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import WordTiles from "../Components/WordTiles.js";
 import "../Styles/FlexPosition.css";
 import "../Styles/Utilities.css";
+import "../Styles/Button.css";
 
 // The Menu Page.
 function Menu() {

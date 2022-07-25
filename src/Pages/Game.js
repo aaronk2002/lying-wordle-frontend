@@ -5,6 +5,8 @@ import WordTiles from "../Components/WordTiles.js";
 import '../Styles/Utilities.css';
 import '../Styles/FlexPosition.css';
 import '../Styles/Colors.css';
+import '../Styles/Button.css';
+import "../Styles/Fonts.css";
 import axios from "axios";
 
 // Creates initial blank set of guesses, where each guesses
