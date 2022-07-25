@@ -95,3 +95,7 @@
 .center-font {
     text-align: center;
 }
+
+.mobile-center {
+    margin: auto;
+}
