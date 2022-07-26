@@ -245,24 +245,24 @@ const Game = (props) => {
                 <div className="column-flex-single">
                     <span className="row-flex-container">
                         {row1.map((letter) => 
-                            <button className="row-flex-single key letter-key white center" onClick={() => handleAlphabet({key: letter})}>{letter}</button>
+                            <button className="row-flex-single key letter-key white" onClick={() => handleAlphabet({key: letter})}>{letter}</button>
                         )}
                     </span>
                 </div>
                 <div className="column-flex-single">
                     <span className="row-flex-container">
                         {row2.map((letter) => 
-                            <button className="row-flex-single key letter-key white center" onClick={() => handleAlphabet({key: letter})}>{letter}</button>
+                            <button className="row-flex-single key letter-key white" onClick={() => handleAlphabet({key: letter})}>{letter}</button>
                         )}
                     </span>
                 </div>
                 <div className="column-flex-single">
                     <span className="row-flex-container">
-                        <button className="row-flex-single key other-key white center" onClick={handleEnter}>Enter</button>
+                        <button className="row-flex-single key other-key white" onClick={handleEnter}>Enter</button>
                         {row3.map((letter) => 
-                            <button className="row-flex-single key letter-key white center" onClick={() => handleAlphabet({key: letter})}>{letter}</button>
+                            <button className="row-flex-single key letter-key white" onClick={() => handleAlphabet({key: letter})}>{letter}</button>
                         )}
-                        <button className="row-flex-single key other-key white center" onClick={handleBackspace}>Backspace</button>
+                        <button className="row-flex-single key other-key white" onClick={handleBackspace}>Backspace</button>
                     </span>
                 </div>
             </div>
