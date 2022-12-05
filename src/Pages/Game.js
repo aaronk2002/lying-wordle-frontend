@@ -226,10 +226,10 @@ const Game = (props) => {
     }
     
     return (<>
-        Under Repair! Sorry D:
+        
         <div className='full-screen'>
             
-            <p className="title center">{props.gameType + " Mode"}</p>
+            <p className="title center">Under Repair! Sorry D:</p>
 
             <div className="column-flex-cotainer">
                 {guesses.map((guess) =>
