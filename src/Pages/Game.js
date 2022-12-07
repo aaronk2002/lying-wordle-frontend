@@ -9,6 +9,8 @@ import '../Styles/Button.css';
 import "../Styles/Fonts.css";
 import axios from "axios";
 
+const web = "https://lying-wordle-server.herokuapp.com";
+
 // Creates initial blank set of guesses, where each guesses
 // are represented by the state of each tiles.
 function initialGuesses() {
@@ -96,12 +98,12 @@ function compareWord(com, player, gameType) {
 }
 
 async function getNewWord() {
-    let word = await axios.get('https://lying-wordle-server.herokuapp.com/word/');
+    let word = await axios.get(web + '/word/');
     return word.data.word;
 }
 
 async function isWord(word) {
-    let res = await axios.post('https://lying-wordle-server.herokuapp.com/word/match/', {word: word});
+    let res = await axios.post(web + '/word/match/', {word: word});
     return Boolean(res.data);
 }
 
