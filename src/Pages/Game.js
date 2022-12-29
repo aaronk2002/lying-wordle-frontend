@@ -9,7 +9,8 @@ import '../Styles/Button.css';
 import "../Styles/Fonts.css";
 import axios from "axios";
 
-const web = "https://lying-wordle-server.herokuapp.com";
+const web = "https://helloworld-bawrba2poq-uc.a.run.app";
+// const web = "http://localhost:5000";
 
 // Creates initial blank set of guesses, where each guesses
 // are represented by the state of each tiles.
@@ -231,7 +232,7 @@ const Game = (props) => {
         
         <div className='full-screen'>
             
-            <p className="title center">Under Repair! Sorry D:</p>
+            <p className="title center">{props.gameType} Mode</p>
 
             <div className="column-flex-cotainer">
                 {guesses.map((guess) =>
